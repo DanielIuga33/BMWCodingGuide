@@ -1,0 +1,24 @@
+{
+  "F30": {
+    "FEM_BODY": {
+      "dezactivare start-stop": {
+        "tool": {
+          "ro": "NCS Expert",
+          "en": "NCS Expert"
+        },
+        "pasii": {
+          "ro": [
+            "Deschide E-sys",
+            "Selectează profilul corespunzător",
+            "Execută codarea"
+          ],
+          "en": [
+            "Open E-sys",
+            "Select the correct profile",
+            "Perform coding"
+          ]
+        }
+      }
+    }
+  }
+}
