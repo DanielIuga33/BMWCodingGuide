@@ -1,5 +1,32 @@
+
 {
   "F30": {
+    "FEM_BODY": {
+      "start-stop memory": {
+        "tool": {
+          "ro": "E-sys",
+          "en": "E-sys"
+        },
+        "pasii": {
+          "ro": [
+            "Deschide E-sys",
+            "Selecteaza profilul F30",
+            "Porneste conexiunea",
+            "Activeaza FA",
+            "Alege Modulul FEM_BODY",
+            "Cauta functia ",
+            "Execută codarea"
+          ],
+          "en": [
+            "Open E-sys",
+            "Select the correct profile",
+            "Perform coding"
+          ]
+        }
+      }
+    }
+  },
+  "F10": {
     "FEM_BODY": {
       "dezactivare start-stop": {
         "tool": {
@@ -9,13 +36,31 @@
         "pasii": {
           "ro": [
             "Deschide E-sys",
-            "Selectează profilul corespunzător",
+            "Selectează profilul F10",
             "Execută codarea"
           ],
           "en": [
             "Open E-sys",
-            "Select the correct profile",
+            "Select F10 profile",
             "Perform coding"
+          ]
+        }
+      },
+      "pliere oglinzi automat": {
+        "tool": {
+          "ro": "BimmerCode",
+          "en": "BimmerCode"
+        },
+        "pasii": {
+          "ro": [
+            "Conectează-te la modul FEM_BODY",
+            "Activează funcția de pliere oglinzi la închidere",
+            "Salvează modificările"
+          ],
+          "en": [
+            "Connect to FEM_BODY module",
+            "Enable mirror folding on lock",
+            "Save changes"
           ]
         }
       }
