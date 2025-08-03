@@ -1,11 +1,12 @@
 import sys
 import os
 import json
-from PyQt5.QtWidgets import (
-    QWidget, QLabel, QVBoxLayout, QComboBox, QPushButton, QTextEdit, QHBoxLayout, QMessageBox
-)
 
-from ui_add_dialog import AddCodingDialog
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import (
+    QWidget, QLabel, QVBoxLayout, QComboBox, QPushButton, QTextEdit
+)
+from PyQt5.QtCore import Qt
 
 
 def get_resource_path(relative_path):
@@ -19,11 +20,13 @@ def get_resource_path(relative_path):
 class BMWCodingGuide(QWidget):
     def __init__(self, language):
         super().__init__()
+        icon_path = get_resource_path("data/icon_bmw.ico")
+        self.setWindowIcon(QIcon(icon_path))
         self.setWindowTitle("BMW Coding Guide")
         self.current_language = language
-        self.setFixedSize(600, 500)
+        self.setFixedSize(600, 750)
+        self.setStyleSheet("background-color: hsl(0, 0%, 25%); color: #e4e4e4;")
 
-        # Încarcă datele JSON
         self.json_path = get_resource_path(os.path.join("data", "bmw_codari.json"))
         with open(self.json_path, "r", encoding="utf-8") as f:
             self.data = json.load(f)
@@ -31,158 +34,149 @@ class BMWCodingGuide(QWidget):
         self.initUI()
 
     def initUI(self):
-        main_layout = QVBoxLayout()
+        layout = QVBoxLayout()
 
-
-
-        # UI principale
-        self.model_label = QLabel("Model BMW:")
+        self.model_label = QLabel()
+        self.model_label.setStyleSheet("font-size: 12px; font-weight: 20")
         self.model_combo = QComboBox()
-        self.model_combo.addItem("Alege model")
-        self.model_combo.addItems(self.data.keys())
-        self.model_combo.currentTextChanged.connect(self.update_module)
+        self.model_combo.currentTextChanged.connect(self.update_fabricatie)
+        self.model_combo.setStyleSheet("font-size: 12px; font-weight: 15; height: 30px")
 
-        self.modul_label = QLabel("Modul:")
+        self.fabricatie_label = QLabel()
+        self.fabricatie_label.setStyleSheet("font-size: 12px; font-weight: 20")
+        self.fabricatie_combo = QComboBox()
+        self.fabricatie_combo.currentTextChanged.connect(self.update_module)
+        self.fabricatie_combo.setStyleSheet("font-size: 12px; font-weight: 15; height: 30px")
+
+        self.modul_label = QLabel()
+        self.modul_label.setStyleSheet("font-size: 12px; font-weight: 20")
         self.modul_combo = QComboBox()
         self.modul_combo.currentTextChanged.connect(self.update_functii)
+        self.modul_combo.setStyleSheet("font-size: 12px; font-weight: 15; height: 30px")
 
-        self.functie_label = QLabel("Funcție:")
+        self.functie_label = QLabel()
+        self.functie_label.setStyleSheet("font-size: 12px; font-weight: 20")
         self.functie_combo = QComboBox()
+        self.functie_combo.setStyleSheet("font-size: 12px; font-weight: 15; height: 30px")
 
-        self.show_button = QPushButton("Afișează Instrucțiuni")
+
+        self.show_button = QPushButton()
         self.show_button.clicked.connect(self.show_instructions)
+        self.show_button.setStyleSheet("margin-top: 20px; font-size: 14px; font-weight: 20;"
+                                       " height: 30px;background-color: hsl(0, 0%, 22%); border: 1px solid black;")
 
         self.instructiuni_box = QTextEdit()
         self.instructiuni_box.setReadOnly(True)
 
-        self.add_button = QPushButton("Adaugă codare nouă")
-        self.add_button.clicked.connect(self.open_add_dialog)
+        layout.addWidget(self.model_label)
+        layout.addWidget(self.model_combo)
+        layout.addWidget(self.fabricatie_label)
+        layout.addWidget(self.fabricatie_combo)
+        layout.addWidget(self.modul_label)
+        layout.addWidget(self.modul_combo)
+        layout.addWidget(self.functie_label)
+        layout.addWidget(self.functie_combo)
+        layout.addWidget(self.show_button)
+        layout.addWidget(self.instructiuni_box)
 
-        main_layout.addWidget(self.model_label)
-        main_layout.addWidget(self.model_combo)
-        main_layout.addWidget(self.modul_label)
-        main_layout.addWidget(self.modul_combo)
-        main_layout.addWidget(self.functie_label)
-        main_layout.addWidget(self.functie_combo)
-        main_layout.addWidget(self.show_button)
-        main_layout.addWidget(self.instructiuni_box)
-        main_layout.addWidget(self.add_button)
-
-        self.setLayout(main_layout)
-
-        # Inițializare
-        self.update_module(self.model_combo.currentText())
-
-    def update_model_language_ui(self):
-        self.model_combo.clear()
-        if self.current_language == "ro":
-            self.model_combo.addItem("Alege model")
-        else:
-            self.model_combo.addItem("Choose model")
-        self.model_combo.addItems(self.data.keys())
-        self.model_combo.setCurrentIndex(0)
-
-    def set_ro_language(self):
-        self.current_language = "ro"
-        self.update_ui_language()
-
-    def set_en_language(self):
-        self.current_language = "en"
+        self.setLayout(layout)
         self.update_ui_language()
 
     def update_ui_language(self):
-        self.instructiuni_box.clear()
-        self.update_model_language_ui()
         if self.current_language == "ro":
             self.model_label.setText("Model BMW:")
+            self.fabricatie_label.setText("Fabricație:")
             self.modul_label.setText("Modul:")
             self.functie_label.setText("Funcție:")
             self.show_button.setText("Afișează Instrucțiuni")
-            self.add_button.setText("Adaugă codare nouă")
+            self.model_combo.clear()
+            self.model_combo.addItem("Alege model")
         else:
             self.model_label.setText("BMW Model:")
+            self.fabricatie_label.setText("Manufacture Year:")
             self.modul_label.setText("Module:")
             self.functie_label.setText("Function:")
             self.show_button.setText("Show Instructions")
-            self.add_button.setText("Add New Coding")
-        # reîmprospătare module și funcții
-        self.update_module(self.model_combo.currentText())
+            self.model_combo.clear()
+            self.model_combo.addItem("Choose model")
 
-    def update_module(self, model):
+        self.model_combo.addItems(self.data.keys())
+        self.update_fabricatie(self.model_combo.currentText())
+
+    def update_fabricatie(self, model):
+        self.fabricatie_combo.clear()
+        if self.current_language == "ro":
+            self.fabricatie_combo.addItem("Alege fabricație")
+        else:
+            self.fabricatie_combo.addItem("Choose manufacture year")
+
+        if model in self.data:
+            self.fabricatie_combo.addItems(self.data[model].keys())
+        self.update_module()
+
+    def update_module(self, _=None):
         self.modul_combo.clear()
         if self.current_language == "ro":
             self.modul_combo.addItem("Alege modul")
         else:
             self.modul_combo.addItem("Choose module")
-        if model in self.data:
-            self.modul_combo.addItems(self.data[model].keys())
-        self.modul_combo.setCurrentIndex(0)
-        self.update_functii(self.modul_combo.currentText())
 
-    def update_functii(self, modul):
+        model = self.model_combo.currentText()
+        fabricatie = self.fabricatie_combo.currentText()
+
+        if model in self.data and fabricatie in self.data[model]:
+            self.modul_combo.addItems(self.data[model][fabricatie].keys())
+
+        self.update_functii()
+
+    def update_functii(self, _=None):
         self.functie_combo.clear()
         if self.current_language == "ro":
             self.functie_combo.addItem("Alege funcție")
         else:
             self.functie_combo.addItem("Choose function")
+
         model = self.model_combo.currentText()
-        if model in self.data and modul in self.data[model]:
-            self.functie_combo.addItems(self.data[model][modul].keys())
-        self.functie_combo.setCurrentIndex(0)
+        fabricatie = self.fabricatie_combo.currentText()
+        modul = self.modul_combo.currentText()
+
+        if (
+            model in self.data
+            and fabricatie in self.data[model]
+            and modul in self.data[model][fabricatie]
+        ):
+            self.functie_combo.addItems(self.data[model][fabricatie][modul].keys())
 
     def show_instructions(self):
         model = self.model_combo.currentText()
+        fabricatie = self.fabricatie_combo.currentText()
         modul = self.modul_combo.currentText()
         functie = self.functie_combo.currentText()
 
-        if model in ["Alege model", "Choose model"] or modul in ["Alege modul", "Choose module"] or functie in ["Alege funcție", "Choose function"]:
+        if any(x.startswith(("Alege", "Choose")) for x in [model, fabricatie, modul, functie]):
             self.instructiuni_box.clear()
             return
 
-        instructiuni = self.data[model][modul][functie]
-        tool = instructiuni.get("tool", {}).get(self.current_language, "N/A")
+        try:
+            instructiuni = self.data[model][fabricatie][modul][functie]
+        except KeyError:
+            self.instructiuni_box.setText("Instrucțiuni indisponibile.")
+            return
+
+        tool_data = instructiuni.get("tool", "N/A")
+        if isinstance(tool_data, dict):
+            tool = tool_data.get(self.current_language, "N/A")
+        else:
+            tool = tool_data
+
         pasi = instructiuni.get("pasii", {}).get(self.current_language, [])
 
-        text = f"Instrument recomandat: {tool}\n\n"
+        if self.current_language == "ro":
+            text = f"Instrument recomandat: {tool}\n\n"
+        else:
+            text = f"Recommended tool: {tool}\n\n"
+
         for i, pas in enumerate(pasi, 1):
             text += f"{i}. {pas}\n"
 
         self.instructiuni_box.setText(text)
-
-    def open_add_dialog(self):
-        dialog = AddCodingDialog(self)
-        if dialog.exec_():
-            new_data = dialog.get_data()
-            self.adauga_codare(**new_data)
-
-    def adauga_codare(self, model, modul, functie, fabricatie, tool_ro, tool_en, pasi_ro, pasi_en):
-        # Creează structura în self.data dacă nu există
-        if model not in self.data:
-            self.data[model] = {}
-        if modul not in self.data[model]:
-            self.data[model][modul] = {}
-        # Include perioada fabricației dacă e nevoie
-        # Poți adapta după cum vrei, aici punem ca sub-cheie "fabricatie"
-        codare_info = {
-            "fabricatie": fabricatie,
-            "tool": {
-                "ro": tool_ro,
-                "en": tool_en
-            },
-            "pasii": {
-                "ro": pasi_ro,
-                "en": pasi_en
-            }
-        }
-        self.data[model][modul][functie] = codare_info
-
-        # Salvează în fișier JSON
-        try:
-            with open(self.json_path, "w", encoding="utf-8") as f:
-                json.dump(self.data, f, indent=4, ensure_ascii=False)
-            QMessageBox.information(self, "Succes", "Codarea a fost adăugată și salvată cu succes!")
-        except Exception as e:
-            QMessageBox.critical(self, "Eroare", f"Nu s-a putut salva codarea: {e}")
-
-        # Actualizează UI (combo-uri)
-        self.update_model_language_ui()

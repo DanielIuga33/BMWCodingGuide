@@ -1,75 +1,85 @@
 import os
 import sys
-
-from PyQt5.QtWidgets import QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QComboBox
-from PyQt5.QtCore import Qt
-from ui_main_window import BMWCodingGuide, get_resource_path
-from ui_add_dialog import AddCodingDialog
+from PyQt5.QtWidgets import QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout
+from PyQt5.QtCore import Qt, QSize
 from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import QSize
+from ui_main_window import BMWCodingGuide
+from ui_add_dialog import AddCodingDialog
+
+
+def get_resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except AttributeError:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 
 class WelcomeWindow(QWidget):
     def __init__(self):
         super().__init__()
+        icon_path = get_resource_path("data/icon_bmw.ico")
+        self.setWindowIcon(QIcon(icon_path))
         self.setWindowTitle("BMW Coding Guide - Welcome")
-        self.setFixedSize(400, 200)
+        self.setFixedSize(600, 300)
+        self.setStyleSheet("background-color: hsl(0, 0%, 25%); color: #e4e4e4;")
 
-        self.current_language = "ro"  # default
+        self.current_language = "ro"  # implicit
 
         self.initUI()
-
-    def get_resource_path(relative_path):
-        try:
-            base_path = sys._MEIPASS
-        except AttributeError:
-            base_path = os.path.abspath(".")
-        return os.path.join(base_path, relative_path)
 
     def initUI(self):
         layout = QVBoxLayout()
 
-        # Label de welcome
-        self.label_welcome = QLabel("Bine ai venit! / Welcome!")
-        self.label_welcome.setAlignment(Qt.AlignCenter)
-        layout.addWidget(self.label_welcome)
-
-        # Layout limbi (steaguri)
-        lang_layout = QHBoxLayout()
-        lang_layout.addStretch()
+        # 🔹 Steaguri sus-dreapta
+        flag_layout = QHBoxLayout()
+        flag_layout.addStretch()
 
         self.btn_ro = QPushButton()
         self.btn_ro.setIcon(QIcon(get_resource_path("data/flag_ro.png")))
         self.btn_ro.setIconSize(QSize(29, 29))
         self.btn_ro.setFixedSize(30, 23)
         self.btn_ro.setToolTip("Română")
-        self.btn_ro.clicked.connect(self.set_ro_language)
+        self.btn_ro.clicked.connect(lambda: self.set_language("ro"))
 
         self.btn_en = QPushButton()
         self.btn_en.setIcon(QIcon(get_resource_path("data/flag_en.png")))
         self.btn_en.setIconSize(QSize(29, 29))
         self.btn_en.setFixedSize(30, 23)
         self.btn_en.setToolTip("English")
-        self.btn_en.clicked.connect(self.set_en_language)
+        self.btn_en.clicked.connect(lambda: self.set_language("en"))
 
-        lang_layout.addWidget(self.btn_ro)
-        lang_layout.addWidget(self.btn_en)
+        flag_layout.addWidget(self.btn_ro)
+        flag_layout.addWidget(self.btn_en)
 
-        # Selectare limbă
-        lang_layout = QHBoxLayout()
-        lang_layout.addWidget(QLabel("Selectează limba / Choose language:"))
+        layout.addLayout(flag_layout)
 
-        self.lang_combo = QComboBox()
-        self.lang_combo.addItem("Română", "ro")
-        self.lang_combo.addItem("English", "en")
-        self.lang_combo.currentIndexChanged.connect(self.change_language)
+        # 🔹 Mesaj de bun venit
+        # self.label_welcome = QLabel()
+        # self.label_welcome.setAlignment(Qt.AlignCenter)
+        # layout.addWidget(self.label_welcome)
 
-        lang_layout.addWidget(self.lang_combo)
-        layout.addLayout(lang_layout)
+        welcome_layout = QHBoxLayout()
+        welcome_layout.setAlignment(Qt.AlignLeft)
 
-        # Butoane principale
-        self.btn_start = QPushButton("Începe codare")
-        self.btn_add = QPushButton("Adaugă o funcție nouă")
+        self.icon_label = QLabel()
+        icon_path = get_resource_path("data/BMW_welcome3.png")  # imaginea ta
+        self.icon_label.setPixmap(QIcon(icon_path).pixmap(128, 128))  # dimensiune ajustabilă
+        self.icon_label.setContentsMargins(50, 0, 60, 0)  # margine stânga/sus/dreapta/jos
+
+        self.label_welcome = QLabel()
+        self.label_welcome.setStyleSheet("font-size: 16px; font-weight: bold;")
+        self.label_welcome.setAlignment(Qt.AlignVCenter | Qt.AlignLeft)
+
+        welcome_layout.addWidget(self.icon_label)
+        welcome_layout.addWidget(self.label_welcome)
+
+        layout.addLayout(welcome_layout)
+
+        # 🔹 Butoane principale
+        self.btn_start = QPushButton()
+        self.btn_add = QPushButton()
+
 
         self.btn_start.clicked.connect(self.open_coding_guide)
         self.btn_add.clicked.connect(self.open_add_function)
@@ -80,14 +90,11 @@ class WelcomeWindow(QWidget):
         self.setLayout(layout)
         self.update_texts()
 
-    def set_ro_language(self):
-        self.current_language = "ro"
+        self.btn_start.setStyleSheet("font-size: 14px; font-weight: 20; height: 35px")
+        self.btn_add.setStyleSheet("font-size: 14px; font-weight: 20; height: 35px")
 
-    def set_en_language(self):
-        self.current_language = "en"
-
-    def change_language(self, index):
-        self.current_language = self.lang_combo.currentData()
+    def set_language(self, lang_code):
+        self.current_language = lang_code
         self.update_texts()
 
     def update_texts(self):
@@ -105,9 +112,8 @@ class WelcomeWindow(QWidget):
         self.coding_guide_window.current_language = self.current_language
         self.coding_guide_window.update_ui_language()
         self.coding_guide_window.show()
-        self.close()
 
     def open_add_function(self):
-        self.add_dialog = AddCodingDialog()
+        self.add_dialog = AddCodingDialog(self.current_language)
         self.add_dialog.setWindowTitle("Adaugă Codare Nouă" if self.current_language == "ro" else "Add New Coding")
         self.add_dialog.exec_()
