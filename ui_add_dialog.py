@@ -5,18 +5,11 @@ import sys
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QDialog, QVBoxLayout, QLineEdit, QLabel, QPushButton, QTextEdit, QComboBox
 from PyQt5.QtWidgets import QMessageBox
-from setuptools.config.pyprojecttoml import validate
+from sqlalchemy.orm.sync import update
 
 from data_validator import DataValidator
-from utils import bmw_models
-
-
-def get_resource_path(relative_path):
-    try:
-        base_path = sys._MEIPASS
-    except AttributeError:
-        base_path = os.path.abspath(".")
-    return os.path.join(base_path, relative_path)
+from utils import bmw_models, get_bmw_years_intervals, get_modules_by_model_and_year, \
+    bmw_modules_db, get_resource_path, get_writable_json_path
 
 
 class AddCodingDialog(QDialog):
@@ -32,17 +25,17 @@ class AddCodingDialog(QDialog):
         layout = QVBoxLayout()
 
         self.model_combo = QComboBox()
-        self.fabricatie_input = QLineEdit()
-        self.module_input = QLineEdit()
+        self.fabricatie_combo = QComboBox()
+        self.module_combo = QComboBox()
         self.function_input = QLineEdit()
         self.tool_input = QLineEdit()
         self.pasi_ro_input = QTextEdit()
         self.pasi_en_input = QTextEdit()
 
         self.model_combo.setStyleSheet("font-size: 14px; font-weight: 20; height: 22px")
-        self.module_input.setStyleSheet("font-size: 14px; font-weight: 20; height: 22px")
+        self.fabricatie_combo.setStyleSheet("font-size: 14px; font-weight: 20; height: 22px")
+        self.module_combo.setStyleSheet("font-size: 14px; font-weight: 20; height: 22px")
         self.function_input.setStyleSheet("font-size: 14px; font-weight: 20; height: 22px")
-        self.fabricatie_input.setStyleSheet("font-size: 14px; font-weight: 20; height: 22px")
         self.tool_input.setStyleSheet("font-size: 14px; font-weight: 20; height: 22px")
         self.pasi_en_input.setStyleSheet("font-size: 12px; font-weight: 20")
         self.pasi_ro_input.setStyleSheet("font-size: 12px; font-weight: 20")
@@ -70,6 +63,7 @@ class AddCodingDialog(QDialog):
         }
 
         labels = labels_ro if self.language == "ro" else labels_en
+
         layout.addWidget(QLabel(labels["model"]))
         layout.addWidget(self.model_combo)
         if self.language == "ro":
@@ -78,10 +72,24 @@ class AddCodingDialog(QDialog):
             self.model_combo.addItem("Choose model")
         self.model_combo.addItems(sorted(bmw_models))
         self.model_combo.setCurrentIndex(0)
+        self.model_combo.currentTextChanged.connect(self.update_fabricatie)
+        self.fabricatie_combo.currentTextChanged.connect(self.update_module)
+
         layout.addWidget(QLabel(labels["fabricatie"]))
-        layout.addWidget(self.fabricatie_input)
+        layout.addWidget(self.fabricatie_combo)
+        if self.language == "ro":
+            self.fabricatie_combo.addItem("Alege fabricație")
+        else:
+            self.fabricatie_combo.addItem("Choose manufacture year")
+
         layout.addWidget(QLabel(labels["module"]))
-        layout.addWidget(self.module_input)
+        layout.addWidget(self.module_combo)
+        if self.language == "ro":
+            self.module_combo.addItem("Alege modulul")
+        else:
+            self.module_combo.addItem("Choose module")
+        # self.fabricatie_combo.currentTextChanged.connect(self.update_module)
+
         layout.addWidget(QLabel(labels["function"]))
         layout.addWidget(self.function_input)
         layout.addWidget(QLabel(labels["tool"]))
@@ -100,12 +108,48 @@ class AddCodingDialog(QDialog):
 
         self.setLayout(layout)
 
+    def update_fabricatie(self, model):
+        try:
+            self.fabricatie_combo.clear()
+            if self.language == "ro":
+                self.fabricatie_combo.addItem("Alege fabricație")
+            else:
+                self.fabricatie_combo.addItem("Choose manufacture year")
+            if model in bmw_models:
+                self.fabricatie_combo.addItems(get_bmw_years_intervals(model))
+            else:
+                self.reset_module()
+        except Exception as e:
+            print(e)
+            return
+
+    def reset_module(self):
+        self.module_combo.clear()
+        if self.language == "ro":
+            self.module_combo.addItem("Alege modulul")
+        else:
+            self.module_combo.addItem("Choose module")
+
+    def update_module(self):
+        try:
+            self.module_combo.clear()
+            if self.language == "ro":
+                self.module_combo.addItem("Alege modulul")
+            else:
+                self.module_combo.addItem("Choose module")
+            if self.model_combo.currentText() in bmw_models:
+                if self.fabricatie_combo.currentText() in bmw_modules_db[self.model_combo.currentText()]:
+                    self.module_combo.addItems(get_modules_by_model_and_year
+                                               (self.model_combo.currentText(), self.fabricatie_combo.currentText()))
+        except Exception as e:
+            print(e)
+
     def get_data(self):
         return {
             "model": self.model_combo.currentText(),
-            "modul": self.module_input.text().strip(),
+            "modul": self.module_combo.currentText(),
             "functie": self.function_input.text().strip(),
-            "fabricatie": self.fabricatie_input.text().strip(),
+            "fabricatie": self.fabricatie_combo.currentText(),
             "tool": self.tool_input.text().strip(),
             "pasi_ro": [line.strip() for line in self.pasi_ro_input.toPlainText().splitlines() if line.strip()],
             "pasi_en": [line.strip() for line in self.pasi_en_input.toPlainText().splitlines() if line.strip()]
@@ -119,16 +163,26 @@ class AddCodingDialog(QDialog):
         except Exception as e:
             QMessageBox.information(self, "Eroare: " if self.language == "ro" else "Error:", str(e))
             return
-        filepath = os.path.join("data", "bmw_codari.json")
+
+        # Calea către fișierul JSON
+        if getattr(sys, 'frozen', False):
+            # Rulat ca EXE
+            base_path = os.path.dirname(sys.executable)
+        else:
+            # Rulat din PyCharm / sursă
+            base_path = os.path.dirname(os.path.abspath(__file__))
+
+        data_dir = os.path.join(base_path, "data")
+        filepath = os.path.join(data_dir, "bmw_codari.json")
 
         model = data["model"]
         fabricatie = data["fabricatie"]
         modul = data["modul"]
         functie = data["functie"]
 
-        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        os.makedirs(data_dir, exist_ok=True)
 
-        # Încarcă fișierul existent (sau creează structura nouă)
+        # Încarcă fișierul existent sau creează structura nouă
         if os.path.exists(filepath):
             with open(filepath, "r", encoding="utf-8") as f:
                 try:
@@ -138,15 +192,9 @@ class AddCodingDialog(QDialog):
         else:
             json_data = {}
 
-        # Asigură existența structurii: model > fabricatie > modul
-        if model not in json_data:
-            json_data[model] = {}
-        if fabricatie not in json_data[model]:
-            json_data[model][fabricatie] = {}
-        if modul not in json_data[model][fabricatie]:
-            json_data[model][fabricatie][modul] = {}
+        # Creează structura: model > fabricatie > modul
+        json_data.setdefault(model, {}).setdefault(fabricatie, {}).setdefault(modul, {})
 
-        # Adaugă funcția
         json_data[model][fabricatie][modul][functie] = {
             "tool": data["tool"],
             "pasii": {
@@ -155,10 +203,30 @@ class AddCodingDialog(QDialog):
             }
         }
 
-        # Scrie înapoi în fișier
-        with open(filepath, "w", encoding="utf-8") as f:
-            json.dump(json_data, f, ensure_ascii=False, indent=4)
+        errors = 0
+        # FOR THE SCRIPT
+        try:
+            with open(filepath, "w", encoding="utf-8") as f:
+                json.dump(json_data, f, ensure_ascii=False, indent=4)
 
-        msg_text = "Codarea a fost salvată cu succes!" if self.language == "ro" else "Coding was saved successfully!"
-        QMessageBox.information(self, "Succes" if self.language == "ro" else "Success", msg_text)
-        self.accept()
+            msg_text = "Codarea a fost salvată cu succes!" if self.language == "ro" else "Coding was saved successfully!"
+            QMessageBox.information(self, "Succes" if self.language == "ro" else "Success", msg_text)
+            self.accept()
+        except Exception as e:
+            errors += 1
+            QMessageBox.critical(self, "Eroare salvare", str(e))
+
+        # FOR THE .EXE
+        try:
+            location = get_resource_path("../_internal/data/bmw_codari.json")
+            with open(location, "w", encoding="utf-8") as f:
+                json.dump(json_data, f, ensure_ascii=False, indent=4)
+
+                msg_text = "Codarea a fost salvată cu succes!" if self.language == "ro" else "Coding was saved successfully!"
+                QMessageBox.information(self, "Succes" if self.language == "ro" else "Success", msg_text)
+                self.accept()
+
+        except Exception as e:
+            errors += 1
+            if errors == 2:
+                QMessageBox.critical(self, "Eroare salvare", str(e))

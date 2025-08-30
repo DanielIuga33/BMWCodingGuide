@@ -1,23 +1,15 @@
 import os
-import sys
 from PyQt5.QtWidgets import QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout
 from PyQt5.QtCore import Qt, QSize
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon, QPixmap
 from ui_main_window import BMWCodingGuide
-from ui_add_dialog import AddCodingDialog
-
-
-def get_resource_path(relative_path):
-    try:
-        base_path = sys._MEIPASS
-    except AttributeError:
-        base_path = os.path.abspath(".")
-    return os.path.join(base_path, relative_path)
+from ui_add_dialog import AddCodingDialog, get_resource_path
 
 
 class WelcomeWindow(QWidget):
     def __init__(self):
         super().__init__()
+        self.json_path = get_resource_path(os.path.join("data", "bmw_codari.json"))
         icon_path = get_resource_path("data/icon_bmw.ico")
         self.setWindowIcon(QIcon(icon_path))
         self.setWindowTitle("BMW Coding Guide - Welcome")
@@ -54,16 +46,12 @@ class WelcomeWindow(QWidget):
 
         layout.addLayout(flag_layout)
 
-        # 🔹 Mesaj de bun venit
-        # self.label_welcome = QLabel()
-        # self.label_welcome.setAlignment(Qt.AlignCenter)
-        # layout.addWidget(self.label_welcome)
 
         welcome_layout = QHBoxLayout()
         welcome_layout.setAlignment(Qt.AlignLeft)
 
         self.icon_label = QLabel()
-        icon_path = get_resource_path("data/BMW_welcome3.png")  # imaginea ta
+        icon_path = get_resource_path("data/BMW_welcome.png")  # imaginea ta
         self.icon_label.setPixmap(QIcon(icon_path).pixmap(128, 128))  # dimensiune ajustabilă
         self.icon_label.setContentsMargins(50, 0, 60, 0)  # margine stânga/sus/dreapta/jos
 
@@ -79,7 +67,6 @@ class WelcomeWindow(QWidget):
         # 🔹 Butoane principale
         self.btn_start = QPushButton()
         self.btn_add = QPushButton()
-
 
         self.btn_start.clicked.connect(self.open_coding_guide)
         self.btn_add.clicked.connect(self.open_add_function)

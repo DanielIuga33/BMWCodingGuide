@@ -1,137 +1,343 @@
+import os
+import shutil
+import sys
+
+
+def get_bmw_years_intervals(model):
+    model_data = bmw_years.get(model)
+
+    if not model_data:
+        return f"Modelul {model} nu este în baza de date."
+
+    intervals = []
+    for key, (start, end) in model_data.items():
+        if end is None:
+            end = 2025  # presupunem anul curent sau un an mare pentru 'prezent'
+        intervals.append(f"{start}-{end}")
+    return intervals
+
+
+def get_modules_by_model_and_year(model, year):
+    if model not in bmw_modules_db:
+        return f"Modelul {model} nu există în baza de date."
+
+    modules_for_year = bmw_modules_db[model].get(year)
+    if not modules_for_year:
+        return f"Nu există date pentru anul {year} la modelul {model}."
+
+    return modules_for_year
+
+
+def get_resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except AttributeError:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
+
+
+def get_writable_json_path():
+    appdata_dir = os.getenv("APPDATA")  # Ex: C:\Users\User\AppData\Roaming
+    target_folder = os.path.join(appdata_dir, "BMW_Coding_Guide")
+    os.makedirs(target_folder, exist_ok=True)
+
+    writable_json = os.path.join(target_folder, "bmw_codari.json")
+
+    # Copiază fișierul original din folderul "data" doar dacă nu există deja
+    if not os.path.exists(writable_json):
+        # Calea originală relativă (unde se află în folderul EXE)
+        base_path = getattr(sys, '_MEIPASS', os.path.abspath("."))
+        original_json = os.path.join(base_path, "data", "bmw_codari.json")
+        shutil.copyfile(original_json, writable_json)
+
+    return writable_json
+
+
 bmw_models = [
-            # Seria 1
-            "E81", "E82", "E87", "E88", "F20", "F21", "F40",
+    # Seria 1
+    "E81", "E82", "E87", "E88", "F20", "F21", "F40",
 
-            # Seria 2
-            "F22", "F23", "F45", "F46", "G42",
+    # Seria 2
+    "F22", "F23", "F45", "F46", "G42",
 
-            # Seria 3
-            "E36", "E46", "E90", "E91", "E92", "E93",
-            "F30", "F31", "F34", "G20",
+    # Seria 3
+    "E36", "E46", "E90", "E91", "E92", "E93",
+    "F30", "F31", "F34", "G20",
 
-            # Seria 4
-            "F32", "F33", "F36", "G22",
+    # Seria 4
+    "F32", "F33", "F36", "G22",
 
-            # Seria 5
-            "E39", "E60", "E61", "F10", "F11", "G30",
+    # Seria 5
+    "E39", "E60", "E61", "F10", "F11", "G30",
 
-            # Seria 6
-            "E63", "E64", "F06", "F12", "F13",
+    # Seria 6
+    "E63", "E64", "F06", "F12", "F13",
 
-            # Seria 7
-            "E65", "E66", "F01", "F02", "G11",
+    # Seria 7
+    "E65", "E66", "F01", "F02", "G11",
 
-            # Seria 8
-            "G14", "G15", "G16",
+    # Seria 8
+    "G14", "G15", "G16",
 
-            # X Series (SUV-uri)
-            "X1 E84", "X1 F48", "X2 F39",
-            "X3 E83", "X3 F25", "X3 G01",
-            "X4 F26", "X4 G02",
-            "X5 E53", "X5 E70", "X5 F15", "X5 G05",
-            "X6 E71", "X6 F16", "X6 G06",
-            "X7 G07",
+    # X Series (SUV-uri)
+    "X1 E84", "X1 F48", "X2 F39",
+    "X3 E83", "X3 F25", "X3 G01",
+    "X4 F26", "X4 G02",
+    "X5 E53", "X5 E70", "X5 F15", "X5 G05",
+    "X6 E71", "X6 F16", "X6 G06",
+    "X7 G07",
 
-            # Z Series (Roadsters/Coupes)
-            "Z1", "Z3", "Z4 E85", "Z4 E89", "Z4 G29",
+    # Z Series (Roadsters/Coupes)
+    "Z1", "Z3", "Z4 E85", "Z4 E89", "Z4 G29",
 
-            # i Series (Electrice / hibride)
-            "i3", "i4", "i8",]
+    # i Series (Electrice / hibride)
+    "i3", "i4", "i8", ]
 
 bmw_modules = [
     # --- Generația E (anii '90 - început 2010) ---
-    "CAS",        # Car Access System - imobilizator și recunoașterea cheii
-    "FRM",        # Footwell Module - control lumini și confort interior
-    "EWS",        # Elektronische Wegfahrsperre - imobilizator clasic
-    "DME",        # Digital Motor Electronics - unitate de control motor
-    "EGS",        # Electronic Gearbox System - control cutie automată
-    "KOMBI",      # Kombiinstrument - bord analogic/digital
-    "CCC",        # Car Communication Computer - sistem navigație vechi
-    "SRS",        # Supplemental Restraint System - airbag-uri și siguranță pasageri
+    "CAS",  # Car Access System - imobilizator și recunoașterea cheii
+    "FRM",  # Footwell Module - control lumini și confort interior
+    "EWS",  # Elektronische Wegfahrsperre - imobilizator clasic
+    "DME",  # Digital Motor Electronics - unitate de control motor
+    "EGS",  # Electronic Gearbox System - control cutie automată
+    "KOMBI",  # Kombiinstrument - bord analogic/digital
+    "CCC",  # Car Communication Computer - sistem navigație vechi
+    "SRS",  # Supplemental Restraint System - airbag-uri și siguranță pasageri
 
     # --- Generația F (2010 - 2018) ---
-    "FEM_BODY",   # Front Electronic Module - control caroserie și funcții confort
-    "BDC",        # Body Domain Controller - centralizare, confort, unele funcții caroserie
-    "NFRM",       # New Footwell Module - versiune nouă FRM pentru lumini și confort
-    "CIC",        # Car Information Computer - sistem navigație modern
-    "NBT",        # Navigation Business Technology - navigație și iDrive îmbunătățite
-    "ZGW",        # Zentral Gateway - poartă centrală pentru CAN bus și comunicații între module
-    "HUD",        # Head-Up Display - modul pentru afișaj în parbriz
-    "BMB",        # Battery Management Box - management baterie și curent
-    "FZD",        # Roof Control Module - control decapotabilă (modele cabrio)
-    "RDC",        # Tire Pressure Monitoring System - monitorizare presiune roți
-    "LMA",        # Light Module Advanced - control avansat al luminilor
-    "TMS",        # Tire Monitoring System - sistem pentru monitorizare anvelope
+    "FEM_BODY",  # Front Electronic Module - control caroserie și funcții confort
+    "BDC",  # Body Domain Controller - centralizare, confort, unele funcții caroserie
+    "NFRM",  # New Footwell Module - versiune nouă FRM pentru lumini și confort
+    "CIC",  # Car Information Computer - sistem navigație modern
+    "NBT",  # Navigation Business Technology - navigație și iDrive îmbunătățite
+    "ZGW",  # Zentral Gateway - poartă centrală pentru CAN bus și comunicații între module
+    "HUD",  # Head-Up Display - modul pentru afișaj în parbriz
+    "BMB",  # Battery Management Box - management baterie și curent
+    "FZD",  # Roof Control Module - control decapotabilă (modele cabrio)
+    "RDC",  # Tire Pressure Monitoring System - monitorizare presiune roți
+    "LMA",  # Light Module Advanced - control avansat al luminilor
+    "TMS",  # Tire Monitoring System - sistem pentru monitorizare anvelope
 
     # --- Generația G (2018 - prezent) ---
-    "BMC",        # Battery Management Controller - control baterie îmbunătățit (mai ales hibride și electrice)
-    "EHC",        # Electronic Height Control - control electronic suspensie adaptivă
-    "RCM2",       # Radar Cruise Control Module 2 - modul avansat pentru cruise control radar
-    "IAM",        # Integrated Access Module - acces și securitate integrată
-    "CAS4",       # Car Access System versiunea 4 - sistem avansat de acces și imobilizare
-    "RDC2",       # Tire Pressure Monitoring System versiunea 2 - sistem modern TPMS
-    "ZBE",        # Zentralsteuergerät Bordnetz - Central Electric Module - control electric central al caroseriei
-    "TPMA",       # TPMS Advanced - sistem avansat de monitorizare a presiunii în roți
-    "EHV",        # Electronic High Voltage Control - control sisteme înalte tensiuni (modele electrice/hibride)
-    "IHKA2",      # Interior Heating and Air Conditioning versiunea 2 - climatizare avansată
-    "NBT EVO",    # Navigație iDrive evoluată - sistem multimedia și navigație modern
-    "GWS2",       # Gear Selector Switch versiunea 2 - selector cutie îmbunătățit
-    "SJS",        # Safety Junction Box - modul de siguranță și protecție electrică
-    "MRS",        # Multiple Restraint System - sistem avansat airbag-uri și protecție pasageri
+    "BMC",  # Battery Management Controller - control baterie îmbunătățit (mai ales hibride și electrice)
+    "EHC",  # Electronic Height Control - control electronic suspensie adaptivă
+    "RCM2",  # Radar Cruise Control Module 2 - modul avansat pentru cruise control radar
+    "IAM",  # Integrated Access Module - acces și securitate integrată
+    "CAS4",  # Car Access System versiunea 4 - sistem avansat de acces și imobilizare
+    "RDC2",  # Tire Pressure Monitoring System versiunea 2 - sistem modern TPMS
+    "ZBE",  # Zentralsteuergerät Bordnetz - Central Electric Module - control electric central al caroseriei
+    "TPMA",  # TPMS Advanced - sistem avansat de monitorizare a presiunii în roți
+    "EHV",  # Electronic High Voltage Control - control sisteme înalte tensiuni (modele electrice/hibride)
+    "IHKA2",  # Interior Heating and Air Conditioning versiunea 2 - climatizare avansată
+    "NBT EVO",  # Navigație iDrive evoluată - sistem multimedia și navigație modern
+    "GWS2",  # Gear Selector Switch versiunea 2 - selector cutie îmbunătățit
+    "SJS",  # Safety Junction Box - modul de siguranță și protecție electrică
+    "MRS",  # Multiple Restraint System - sistem avansat airbag-uri și protecție pasageri
 ]
 
-def get_modules_for_model(model):
-    if model[0] == "E":
-        return [ # --- Generația E (anii '90 - început 2010) ---
-            "CAS",        # Car Access System - imobilizator și recunoașterea cheii
-            "FRM",        # Footwell Module - control lumini și confort interior
-            "EWS",        # Elektronische Wegfahrsperre - imobilizator clasic
-            "DME",        # Digital Motor Electronics - unitate de control motor
-            "EGS",        # Electronic Gearbox System - control cutie automată
-            "KOMBI",      # Kombiinstrument - bord analogic/digital
-            "CCC",        # Car Communication Computer - sistem navigație vechi
-            "SRS",        # Supplemental Restraint System - airbag-uri și siguranță pasageri
-            "NFRM",  # New Footwell Module - versiune nouă FRM pentru lumini și confort
-            "CIC",  # Car Information Computer - sistem navigație modern
-            "HUD",  # Head-Up Display - modul pentru afișaj în parbriz
-            "CVM",
-        ]
-    elif model[0] == "F":
-        return [
-            "FEM_BODY",  # Front Electronic Module - control caroserie și funcții confort
-            "BDC",  # Body Domain Controller - centralizare, confort, unele funcții caroserie
-            "NFRM",  # New Footwell Module - versiune nouă FRM pentru lumini și confort
-            "CIC",  # Car Information Computer - sistem navigație modern
-            "NBT",  # Navigation Business Technology - navigație și iDrive îmbunătățite
-            "ZGW",  # Zentral Gateway - poartă centrală pentru CAN bus și comunicații între module
-            "HUD",  # Head-Up Display - modul pentru afișaj în parbriz
-            "BMB",  # Battery Management Box - management baterie și curent
-            "FZD",  # Roof Control Module - control decapotabilă (modele cabrio)
-            "RDC",  # Tire Pressure Monitoring System - monitorizare presiune roți
-            "LMA",  # Light Module Advanced - control avansat al luminilor
-            "TMS",  # Tire Monitoring System - sistem pentru monitorizare anvelope
-        ]
-    else:
-        return [
-            "BMC",  # Battery Management Controller - control baterie îmbunătățit (mai ales hibride și electrice)
-            "EHC",  # Electronic Height Control - control electronic suspensie adaptivă
-            "RCM2",  # Radar Cruise Control Module 2 - modul avansat pentru cruise control radar
-            "IAM",  # Integrated Access Module - acces și securitate integrată
-            "CAS4",  # Car Access System versiunea 4 - sistem avansat de acces și imobilizare
-            "RDC2",  # Tire Pressure Monitoring System versiunea 2 - sistem modern TPMS
-            "ZBE",  # Zentralsteuergerät Bordnetz - Central Electric Module - control electric central al caroseriei
-            "TPMA",  # TPMS Advanced - sistem avansat de monitorizare a presiunii în roți
-            "EHV",  # Electronic High Voltage Control - control sisteme înalte tensiuni (modele electrice/hibride)
-            "IHKA2",  # Interior Heating and Air Conditioning versiunea 2 - climatizare avansată
-            "NBT EVO",  # Navigație iDrive evoluată - sistem multimedia și navigație modern
-            "GWS2",  # Gear Selector Switch versiunea 2 - selector cutie îmbunătățit
-            "SJS",  # Safety Junction Box - modul de siguranță și protecție electrică
-            "MRS",  # Multiple Restraint System - sistem avansat airbag-uri și protecție pasageri
-        ]
+bmw_modules_db = {
+    #Seria 1
+    "E81": {
+        "2007-2009": ["FRM1", "JBBF", "CAS", "KOMBI", "DME", "EGS"],
+        "2009-2012": ["FRM2", "JBBF", "CAS", "KOMBI", "DME", "EGS"]
+    },
+    "E82": {
+        "2007-2010": ["FRM1", "JBBF", "CAS", "KOMBI", "DME", "EGS"],
+        "2011-2013": ["FRM2", "NFRM", "CAS", "KOMBI", "DME", "EGS"]
+    },
+    "E87": {
+        "2004-2006": ["LCM", "JBBF", "CAS", "KOMBI", "DME", "EGS"],
+        "2007-2011": ["FRM2", "JBBF", "CAS", "KOMBI", "DME", "EGS"]
+    },
+    "E88": {
+        "2008-2010": ["FRM1", "JBBF", "CAS", "KOMBI", "DME", "EGS"],
+        "2011-2013": ["FRM2", "NFRM", "CAS", "KOMBI", "DME", "EGS"]
+    },
+    "F20": {
+        "2011-2014": ["FEM", "BDC", "KOMBI", "DME", "EGS", "DSC"],
+        "2015-2019": ["FEM", "BDC", "HU_ENTRYNAV", "ZBE2", "DME", "EGS", "DSC"]
+    },
+    "F21": {
+        "2012-2014": ["FEM", "BDC", "KOMBI", "DME", "EGS", "DSC"],
+        "2015-2019": ["FEM", "BDC", "HU_ENTRYNAV", "ZBE2", "DME", "EGS", "DSC"]
+    },
+    "F40": {
+        "2019-2025": ["BDC3", "HU_H3", "KOMBI", "EGS", "DME", "DSC", "SAS", "ZBE3"]
+    },
+    #Seria 2
+    "F22": {
+        "2014-2017": ["FEM", "BDC", "HU_ENTRYNAV", "KOMBI", "DME", "EGS", "DSC"],
+        "2018-2021": ["FEM", "BDC", "HU_NBT_EVO", "KOMBI", "DME", "EGS", "DSC"]
+    },
+    "F23": {
+        "2014-2017": ["FEM", "BDC", "HU_ENTRYNAV", "KOMBI", "DME", "EGS", "DSC"],
+        "2018-2021": ["FEM", "BDC", "HU_NBT_EVO", "KOMBI", "DME", "EGS", "DSC"]
+    },
+    "F45": {
+        "2014-2017": ["BDC", "HU_ENTRYNAV", "ZBE2", "KOMBI", "DME", "EGS", "DSC"],
+        "2018-2021": ["BDC", "HU_NBT_EVO", "ZBE2", "KOMBI", "DME", "EGS", "DSC"]
+    },
+    "F46": {
+        "2015-2017": ["BDC", "HU_ENTRYNAV", "ZBE2", "KOMBI", "DME", "EGS", "DSC"],
+        "2018-2021": ["BDC", "HU_NBT_EVO", "ZBE2", "KOMBI", "DME", "EGS", "DSC"]
+    },
+    "G42": {
+        "2021-2025": ["BDC3", "HU_H3", "KOMBI", "DME", "EGS", "DSC", "SAS", "ZBE3"]
+    },
+    #Seria 3
+    "E36": {
+        "1990-1995": ["DME", "EGS", "ABS/ASC", "KOMBI", "ZKE", "IHKA", "AIRBAG"],
+        "1996-2000": ["DME", "EGS", "ABS/ASC", "KOMBI", "ZKE", "IHKA", "AIRBAG", "EWS II", "LKM", "GM"]
+    },
+    "E46": {
+        "1998-2001": ["LCM", "IKE", "DME", "EGS", "ZKE", "GM5"],
+        "2002-2006": ["LCM", "IKE", "DME", "EGS", "ZKE", "GM5"]
+    },
+    "E90": {
+        "2005-2008": ["FRM2", "CCC", "JBBF", "CAS", "KOMBI", "DME", "EGS"],
+        "2009-2011": ["FRM2", "NFRM", "CAS", "KOMBI", "DME", "EGS", "CIC"]
+    },
+    "E91": {
+        "2005-2008": ["FRM1", "JBBF", "CAS", "KOMBI", "DME", "EGS", "CCC"],
+        "2009-2012": ["FRM2", "NFRM", "CAS", "KOMBI", "DME", "EGS", "CIC"]
+    },
+    "E92": {
+        "2006-2008": ["FRM1", "JBBF", "CAS", "KOMBI", "DME", "EGS", "CIC"],
+        "2009-2013": ["FRM2", "NFRM", "CAS", "KOMBI", "DME", "EGS", "CIC"]
+    },
+    "E93": {
+        "2007-2008": ["FRM1", "JBBF", "CAS", "KOMBI", "DME", "EGS", "CIC"],
+        "2009-2013": ["FRM2", "NFRM", "CAS", "KOMBI", "DME", "EGS", "CIC"]
+    },
+    "F30": {
+        "2011-2015": ["FEM", "BDC", "HU_ENTRY", "KOMBI", "DME", "EGS", "DSC", "CIC"],
+        "2015-2019": ["FEM", "BDC", "HU_NBT_EVO", "KOMBI", "DME", "EGS", "DSC"]
+    },
+    "F31": {
+        "2012-2015": ["FEM", "BDC", "HU_ENTRY", "KOMBI", "DME", "EGS", "DSC"],
+        "2015-2019": ["FEM", "BDC", "HU_NBT_EVO", "KOMBI", "DME", "EGS", "DSC"]
+    },
+    "F34": {
+        "2013-2015": ["FEM", "BDC", "HU_ENTRY", "KOMBI", "DME", "EGS", "DSC"],
+        "2015-2019": ["FEM", "BDC", "HU_NBT_EVO", "KOMBI", "DME", "EGS", "DSC"]
+    },
+    "G20": {
+        "2018-2022": ["BDC3", "HU_H3", "KOMBI", "DME", "EGS", "DSC", "SAS", "ZBE3"],
+        "2022-2025": ["BDC3", "HU_H3", "KOMBI", "DME", "EGS", "DSC", "SAS", "ZBE3", "MGU22"]
+    },
+    "G21": {
+        "2019-2022": ["BDC3", "HU_H3", "KOMBI", "DME", "EGS", "DSC", "ZBE3", "SAS"],
+        "2022-2025": ["BDC3", "HU_H3", "KOMBI", "DME", "EGS", "DSC", "ZBE3", "MGU22", "SAS"]
+    },
+    "G28": {
+        "2019-2025": ["BDC3", "HU_H3", "KOMBI", "DME", "EGS", "DSC", "ZBE3", "SAS", "MGU22"]
+    },
+    #Seria 4
+    "F32": {
+        "2013-2016": ["HU_CIC", "DME", "EGS", "KOMBI", "IHKA", "DSC", "FEM", "BDC", "REM", "ZBE"],
+        "2017-2020": ["HU_NBT", "DME", "EGS", "KOMBI", "IHKA", "DSC", "FEM", "BDC", "REM", "ZBE"]
+    },
+    "F33": {
+        "2013-2016": ["HU_CIC", "DME", "EGS", "KOMBI", "IHKA", "DSC", "FEM", "REM", "ZBE"],
+        "2017-2020": ["HU_NBT", "DME", "EGS", "KOMBI", "IHKA", "DSC", "FEM", "REM", "ZBE"]
+    },
+    "F36": {
+        "2014-2016": ["HU_CIC", "DME", "EGS", "KOMBI", "IHKA", "DSC", "FEM", "REM", "ZBE"],
+        "2017-2020": ["HU_NBT", "DME", "EGS", "KOMBI", "IHKA", "DSC", "FEM", "REM", "ZBE"]
+    },
+    "G22": {
+        "2020-2025": ["MGU", "DME", "EGS", "KOMBI", "IHKA", "DSC", "BDC", "ZBE", "REM"]
+    },
+    #Seria 5
+    "E39": {
+        "1995-2000": ["IKE", "DME", "EGS", "ABS", "ZKE", "LCM", "MID", "RAD", "IHKA"],
+        "2001-2003": ["IKE", "DME", "EGS", "ABS", "LCM", "NAV", "IHKA", "ZKE"]
+    },
+    "E60": {
+        "2003-2007": ["CCC", "ASK", "DME", "EGS", "SZL", "ABS", "LMA", "JBBF", "KMBI", "IHKA"],
+        "2007-2010": ["CIC", "DME", "EGS", "SZL", "ABS", "LMA", "JBBF", "KOMBI", "IHKA"]
+    },
+    "E61": {
+        "2004-2007": ["CCC", "ASK", "DME", "EGS", "SZL", "ABS", "LMA", "JBBF", "KMBI", "IHKA", "AHL"],
+        "2007-2010": ["CIC", "DME", "EGS", "SZL", "ABS", "LMA", "JBBF", "KOMBI", "IHKA", "AHL"]
+    },
+    "F10": {
+        "2010-2013": ["HU_CIC", "DME", "EGS", "KOMBI", "IHKA", "ZBE", "JBBF", "DSC", "BDC1"],
+        "2014-2016": ["HU_NBT", "DME", "EGS", "KOMBI", "IHKA", "ZBE", "DSC", "BDC1", "FEM"]
+    },
+    "F11": {
+        "2010-2013": ["HU_CIC", "DME", "EGS", "KOMBI", "IHKA", "ZBE", "DSC", "BDC1", "FEM"],
+        "2014-2016": ["HU_NBT", "DME", "EGS", "KOMBI", "IHKA", "ZBE", "DSC", "BDC1", "FEM"]
+    },
+    "G30": {
+        "2017-2020": ["HU_NBT_EVO", "DME", "EGS", "KOMBI", "IHKA", "ZBE3", "DSC", "BDC3"],
+        "2020-2025": ["MGU", "DME", "EGS", "KOMBI", "IHKA", "ZBE3", "DSC", "BDC3", "MGU22"]
+    },
+    "E63": {
+        "2003-2007": ["CCC", "ASK", "DME", "EGS", "KOMBI", "IHKA", "LMA", "SZL", "DSC"],
+        "2007-2010": ["CIC", "DME", "EGS", "KOMBI", "IHKA", "LMA", "SZL", "DSC"]
+    },
+    "E64": {
+        "2004-2007": ["CCC", "ASK", "DME", "EGS", "KOMBI", "IHKA", "LMA", "SZL", "DSC"],
+        "2007-2010": ["CIC", "DME", "EGS", "KOMBI", "IHKA", "LMA", "SZL", "DSC"]
+    },
+    "F06": {
+        "2012-2015": ["HU_CIC", "DME", "EGS", "IHKA", "DSC", "KOMBI", "ZBE", "FEM"],
+        "2016-2018": ["HU_NBT", "DME", "EGS", "IHKA", "DSC", "KOMBI", "ZBE", "BDC1"]
+    },
+    "F12": {
+        "2011-2015": ["HU_CIC", "DME", "EGS", "IHKA", "DSC", "KOMBI", "ZBE", "FEM"],
+        "2016-2018": ["HU_NBT", "DME", "EGS", "IHKA", "DSC", "KOMBI", "ZBE", "BDC1"]
+    },
+    "F13": {
+        "2011-2015": ["HU_CIC", "DME", "EGS", "IHKA", "DSC", "KOMBI", "ZBE", "FEM"],
+        "2016-2018": ["HU_NBT", "DME", "EGS", "IHKA", "DSC", "KOMBI", "ZBE", "BDC1"]
+    },
+    #Seria 7
+    "E65": {
+        "2001-2005": ["ASK", "DME", "EGS", "LMA", "KOMBI", "IHKA", "SZL", "PDC", "ZBE"],
+        "2006-2008": ["CCC", "DME", "EGS", "LMA", "KOMBI", "IHKA", "SZL", "PDC", "ZBE"]
+    },
+    "E66": {
+        "2002-2005": ["ASK", "DME", "EGS", "LMA", "KOMBI", "IHKA", "SZL", "PDC", "ZBE"],
+        "2006-2008": ["CCC", "DME", "EGS", "LMA", "KOMBI", "IHKA", "SZL", "PDC", "ZBE"]
+    },
+    "F01": {
+        "2008-2012": ["HU_CIC", "DME", "EGS", "KOMBI", "IHKA", "LMA", "JBBF", "DSC", "ZBE"],
+        "2013-2015": ["HU_NBT", "DME", "EGS", "KOMBI", "IHKA", "LMA", "JBBF", "DSC", "ZBE"]
+    },
+    "F02": {
+        "2009-2012": ["HU_CIC", "DME", "EGS", "KOMBI", "IHKA", "LMA", "JBBF", "DSC", "ZBE"],
+        "2013-2015": ["HU_NBT", "DME", "EGS", "KOMBI", "IHKA", "LMA", "JBBF", "DSC", "ZBE"]
+    },
+    "G11": {
+        "2015-2019": ["HU_NBT_EVO", "DME", "EGS", "KOMBI", "IHKA", "ZBE", "DSC", "BDC"],
+        "2020-2025": ["MGU", "DME", "EGS", "KOMBI", "IHKA", "ZBE", "DSC", "BDC", "MGU22"]
+    },
+    #Seria 8
+    "G14": {
+        "2018-2025": ["MGU", "DME", "EGS", "KOMBI", "IHKA", "ZBE", "DSC", "BDC", "REM"]
+    },
+    "G15": {
+        "2018-2025": ["MGU", "DME", "EGS", "KOMBI", "IHKA", "ZBE", "DSC", "BDC", "REM"]
+    },
+    "G16": {
+        "2018-2025": ["MGU", "DME", "EGS", "KOMBI", "IHKA", "ZBE", "DSC", "BDC", "REM"]
+    }
+}
 
-def get_bmw_years_intervals(model):
-    bmw_years = {
-         # Seria 3
+bmw_years = {
+    # Seria 1
+    "E81": {"non_LCI": (2007, 2009), "LCI": (2009, 2012)},
+    "E82": {"non_LCI": (2007, 2010), "LCI": (2011, 2013)},
+    "E87": {"non_LCI": (2004, 2006), "LCI": (2007, 2011)},
+    "E88": {"non_LCI": (2008, 2010), "LCI": (2011, 2013)},
+    "F20": {"non_LCI": (2011, 2014), "LCI": (2015, 2019)},
+    "F21": {"non_LCI": (2012, 2014), "LCI": (2015, 2019)},
+    "F40": {"non_LCI": (2019, None)},
+
+    # Seria 3
+    "E36": {"non_LCI": (1990, 1995), "LCI": (1996, 2000)},
     "E46": {"non_LCI": (1998, 2001), "LCI": (2002, 2006)},
     "E90": {"non_LCI": (2005, 2008), "LCI": (2009, 2011)},
     "E91": {"non_LCI": (2005, 2008), "LCI": (2009, 2012)},
@@ -204,18 +410,4 @@ def get_bmw_years_intervals(model):
     "i3": {"non_LCI": (2013, 2019)},
     "i4": {"non_LCI": (2021, None)},
     "i8": {"non_LCI": (2014, 2020)},
-    }
-
-    model_data = bmw_years.get(model)
-
-    if not model_data:
-        return f"Modelul {model} nu este în baza de date."
-
-    intervals = []
-    for key, (start, end) in model_data.items():
-        if end is None:
-            end = 2025  # presupunem anul curent sau un an mare pentru 'prezent'
-        intervals.append(f"{start}-{end}")
-
-    return intervals
-
+}

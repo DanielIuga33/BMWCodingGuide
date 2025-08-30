@@ -1,94 +1,33 @@
 {
-    "E90": {
-        "2005-2009": {
-            "CAS": {
-                "Comfort acces": {
-                    "tool": "NCS",
+    "E39": {
+        "1995-2000": {
+            "EGS": {
+                "asdasd": {
+                    "tool": "asdsa",
                     "pasii": {
                         "ro": [
-                            "ASAS"
+                            "dasd"
                         ],
                         "en": [
-                            "ASASASAS"
-                        ]
-                    }
-                },
-                "BALA": {
-                    "tool": "NCS",
-                    "pasii": {
-                        "ro": [
-                            "asdasdasdasfasd"
-                        ],
-                        "en": [
-                            "afasdasdasdas"
-                        ]
-                    }
-                }
-            },
-            "FRM": {
-                "HAZZAR LIGHTS": {
-                    "tool": "NCS",
-                    "pasii": {
-                        "ro": [
-                            "asdasd"
-                        ],
-                        "en": [
-                            "asdasdas"
-                        ]
-                    }
-                }
-            }
-        },
-        "2009-2013": {
-            "CAS": {
-                "LAURENTIU": {
-                    "tool": "NCS",
-                    "pasii": {
-                        "ro": [
-                            "asdasd"
-                        ],
-                        "en": [
-                            "asdasdas"
-                        ]
-                    }
-                }
-            },
-            "NFRM": {
-                "HAMON LIGHTS": {
-                    "tool": "NCS",
-                    "pasii": {
-                        "ro": [
-                            "asdasd"
-                        ],
-                        "en": [
-                            "asdasdas"
+                            "sadsa"
                         ]
                     }
                 }
             }
         }
     },
-    "": {
-        "": {
-            "": {
-                "": {
-                    "tool": "",
+    "E60": {
+        "2007-2010": {
+            "EGS": {
+                "sadas": {
+                    "tool": "dasd",
                     "pasii": {
-                        "ro": [],
-                        "en": []
-                    }
-                }
-            }
-        }
-    },
-    "Alege modelul": {
-        "": {
-            "": {
-                "": {
-                    "tool": "",
-                    "pasii": {
-                        "ro": [],
-                        "en": []
+                        "ro": [
+                            "asdas"
+                        ],
+                        "en": [
+                            "dasd"
+                        ]
                     }
                 }
             }

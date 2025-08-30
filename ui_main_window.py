@@ -4,17 +4,10 @@ import json
 
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import (
-    QWidget, QLabel, QVBoxLayout, QComboBox, QPushButton, QTextEdit
+    QWidget, QLabel, QVBoxLayout, QComboBox, QPushButton, QTextEdit, QMessageBox
 )
-from PyQt5.QtCore import Qt
 
-
-def get_resource_path(relative_path):
-    try:
-        base_path = sys._MEIPASS
-    except AttributeError:
-        base_path = os.path.abspath(".")
-    return os.path.join(base_path, relative_path)
+from ui_add_dialog import get_resource_path
 
 
 class BMWCodingGuide(QWidget):
@@ -27,9 +20,25 @@ class BMWCodingGuide(QWidget):
         self.setFixedSize(600, 750)
         self.setStyleSheet("background-color: hsl(0, 0%, 25%); color: #e4e4e4;")
 
-        self.json_path = get_resource_path(os.path.join("data", "bmw_codari.json"))
-        with open(self.json_path, "r", encoding="utf-8") as f:
-            self.data = json.load(f)
+        # try:
+        #     self.json_path = get_resource_path(os.path.join("data", "bmw_codari.json"))
+        #     with open(self.json_path, "r", encoding="utf-8") as f:
+        #         self.data = json.load(f)
+        # except Exception as e:
+        #     QMessageBox.critical(self, "Error ", str(e))
+        #     QMessageBox.information(self, "Error ", "Eroare cauzata din cauza lipsei de date" if
+        #     self.current_language == "ro" else "Error may be caused due to the lack of data")
+        #     return
+
+        try:
+            self.json_path = get_resource_path("data/bmw_codari.json")
+            with open(self.json_path, "r", encoding="utf-8") as f:
+                self.data = json.load(f)
+        except Exception as e:
+            QMessageBox.critical(self, "Error ", str(e))
+            QMessageBox.information(self, "Error ", "Eroare cauzata din cauza lipsei de date" if
+            self.current_language == "ro" else "Error may be caused due to the lack of data")
+            return
 
         self.initUI()
 
@@ -58,7 +67,6 @@ class BMWCodingGuide(QWidget):
         self.functie_label.setStyleSheet("font-size: 12px; font-weight: 20")
         self.functie_combo = QComboBox()
         self.functie_combo.setStyleSheet("font-size: 12px; font-weight: 15; height: 30px")
-
 
         self.show_button = QPushButton()
         self.show_button.clicked.connect(self.show_instructions)
@@ -141,9 +149,9 @@ class BMWCodingGuide(QWidget):
         modul = self.modul_combo.currentText()
 
         if (
-            model in self.data
-            and fabricatie in self.data[model]
-            and modul in self.data[model][fabricatie]
+                model in self.data
+                and fabricatie in self.data[model]
+                and modul in self.data[model][fabricatie]
         ):
             self.functie_combo.addItems(self.data[model][fabricatie][modul].keys())
 
