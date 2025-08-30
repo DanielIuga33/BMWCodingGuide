@@ -1,5 +1,4 @@
 import os
-import shutil
 import sys
 
 
@@ -34,23 +33,6 @@ def get_resource_path(relative_path):
     except AttributeError:
         base_path = os.path.abspath(".")
     return os.path.join(base_path, relative_path)
-
-
-def get_writable_json_path():
-    appdata_dir = os.getenv("APPDATA")  # Ex: C:\Users\User\AppData\Roaming
-    target_folder = os.path.join(appdata_dir, "BMW_Coding_Guide")
-    os.makedirs(target_folder, exist_ok=True)
-
-    writable_json = os.path.join(target_folder, "bmw_codari.json")
-
-    # Copiază fișierul original din folderul "data" doar dacă nu există deja
-    if not os.path.exists(writable_json):
-        # Calea originală relativă (unde se află în folderul EXE)
-        base_path = getattr(sys, '_MEIPASS', os.path.abspath("."))
-        original_json = os.path.join(base_path, "data", "bmw_codari.json")
-        shutil.copyfile(original_json, writable_json)
-
-    return writable_json
 
 
 bmw_models = [

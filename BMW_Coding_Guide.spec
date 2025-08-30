@@ -5,7 +5,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('data\\\\bmw_codari.json', 'data'), ('data\\\\flag_ro.png', 'data'), ('data\\\\flag_en.png', 'data'), ('data\\\\flag_en.png', 'data'), ('data\\\\BMW_welcome.png', 'data'), ('data\\\\icon_bmw.ico', 'data')],
+    datas=[('data\\\\codes.json', 'data'), ('data\\\\flag_ro.png', 'data'), ('data\\\\flag_en.png', 'data'), ('data\\\\flag_en.png', 'data'), ('data\\\\BMW_welcome.png', 'data'), ('data\\\\icon_bmw.ico', 'data')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
