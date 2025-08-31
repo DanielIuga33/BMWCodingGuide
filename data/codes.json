@@ -1,0 +1,2334 @@
+{
+    "E60": {
+        "2003-2007": {
+            "KMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2007-2010": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E61": {
+        "2004-2007": {
+            "KMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2007-2010": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E63": {
+        "2003-2007": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2007-2010": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E64": {
+        "2004-2007": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2007-2010": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E65": {
+        "2001-2005": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2006-2008": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E66": {
+        "2002-2005": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2006-2008": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E81": {
+        "2007-2009": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2009-2012": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E82": {
+        "2007-2010": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2011-2013": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E87": {
+        "2004-2006": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2007-2011": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E88": {
+        "2008-2010": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2011-2013": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E90": {
+        "2005-2008": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2009-2011": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E91": {
+        "2005-2008": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2009-2012": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E92": {
+        "2006-2008": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2009-2013": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E93": {
+        "2007-2008": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2009-2013": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E70 (X5)": {
+        "2007-2010": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2011-2013": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E71 (X6)": {
+        "2008-2013": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2014-2014": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E83 (X3)": {
+        "2003-2006": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2007-2010": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E84 (X1)": {
+        "2009-2012": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2013-2015": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            },
+            "IHKA": {
+                "START-STOP Memory": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează modulul IHK (Integrated Heating and Air Conditioning / climate module)",
+                            "După selectarea IHK, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul MSA_MEMORY",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă funcția START-STOP rămâne OFF după oprirea și repornirea motorului",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the IHK module (Integrated Heating and Air Conditioning / climate module)",
+                            "After selecting IHK, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter MSA_MEMORY",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the START-STOP function remains OFF after turning the engine off and on",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E85 (Z4)": {
+        "2002-2006": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        },
+        "2007-2008": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "E89 (Z4)": {
+        "2009-2015": {
+            "KOMBI": {
+                "DIGITAL SPEEDOMETER": {
+                    "tool": "NCS Expert",
+                    "pasii": {
+                        "ro": [
+                            "Pornește NCS Expert și selectează VIN/ZCS/FA pentru a citi codarea curentă",
+                            "Citește FA/ZCS al mașinii",
+                            "Alege Expert Mode → Function → Read ECU pentru a încărca codarea actuală",
+                            "Selectează ECU-ul KOMBI (instrument cluster / bord)",
+                            "După selectarea KOMBI, alege VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Salvează fișierul FSW_PSW.TRC pentru backup",
+                            "Deschide fișierul FSW_PSW.TRC cu Notepad, Notepad++ sau NCS Dummy",
+                            "Caută parametrul pentru Digital Speed BC_DIGITAL_V",
+                            "Modifică valoarea de la nicht aktiv la aktiv",
+                            "Salvează fișierul ca FSW_PSW.TRC",
+                            "În NCS Expert, selectează File → Load Job și alege un job de tip CODIEREN",
+                            "Folosește fișierul modificat și execută codarea",
+                            "Așteaptă să finalizeze complet, fără să întrerupi procesul",
+                            "Pornește contactul și verifică dacă instrument cluster-ul afișează viteza digitală",
+                            "Dacă nu apare, repornește contactul și verifică din nou"
+                        ],
+                        "en": [
+                            "Open NCS Expert and select VIN/ZCS/FA to read the current coding",
+                            "Read the car's FA/ZCS",
+                            "Choose Expert Mode → Function → Read ECU to load the current coding",
+                            "Select the KOMBI ECU (instrument cluster/dashboard)",
+                            "After selecting KOMBI, choose VIN/ZCS/FA → Read ECU → Process ECU",
+                            "Save the FSW_PSW.TRC file as a backup",
+                            "Open the FSW_PSW.TRC file with Notepad, Notepad++, or NCS Dummy",
+                            "Look for the parameter for Digital Speed BC_DIGITAL_V",
+                            "Change the value from nicht aktiv to aktiv",
+                            "Save the file as FSW_PSW.TRC",
+                            "In NCS Expert, select File → Load Job and choose a job of type CODIEREN",
+                            "Use the modified file and execute the coding",
+                            "Wait until the process is completely finished, do not interrupt it",
+                            "Turn on the ignition and check if the instrument cluster displays the digital speed",
+                            "If it does not appear, turn the ignition off and on again and check again"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
